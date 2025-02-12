@@ -1,42 +1,53 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 기본 CSS 리셋 (Normalize + Chakra UI와 호환) */
+
+/* 박스 모델 초기화 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 기본 폰트 설정 */
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfe; /* 기본 배경색 */
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
+/* 링크 기본 스타일 제거 */
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* 이미지 초기화 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 버튼 기본 스타일 초기화 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 기본 스크롤바 스타일링 (선택 사항) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
