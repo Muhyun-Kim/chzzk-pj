@@ -5,13 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
   const navbarBtns = [
     { url: "/lol", text: "리그오브레전드" },
     { url: "/eternal-return", text: "이터널리턴" },
   ];
   return (
-    <Box bg="#2f3541" px={4}>
+    <Box bg="#2f3541" px={4} position={"sticky"} top={0} zIndex={1000}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Link href="/" passHref>
           <Button variant="ghost" fontSize="xl" fontWeight="bold">
