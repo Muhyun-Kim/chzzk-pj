@@ -16,6 +16,6 @@ datasource db {
 model AccessToken {
   id           String   @id @default("unique_token")
   accessToken  String   @unique
-  refreshToken DateTime @unique
+  refreshToken String   @unique
   createdAt    DateTime @default(now())
 }
