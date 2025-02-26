@@ -7,7 +7,7 @@ interface LiveListProps {
   liveList: LiveData[];
 }
 
-export default function LiveList({ liveList }: LiveListProps) {
+export default function CustomLiveList({ liveList }: LiveListProps) {
   return (
     <Grid templateColumns="repeat(5, 1fr)" gap={4} p={4}>
       {liveList.map((live, index) => (
