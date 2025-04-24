@@ -10,7 +10,6 @@ export default function EternalReturnHome() {
   };
   return (
     <Box>
-      {/* <Button onClick={onClickTest}>이터널 리턴 홈</Button> */}
       <LiveList />
     </Box>
   );

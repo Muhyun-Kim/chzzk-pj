@@ -22,7 +22,6 @@ export const getReqWithClient = async <T>({
 }: GetReqWithClientProps): Promise<SuccessResType<T> | FailedResType> => {
   try {
     const finalUrl = `https://openapi.chzzk.naver.com${endPointUrl}?${params}`;
-    console.log("finalUrl:", finalUrl);
     const response = await fetch(finalUrl, {
       method: "GET",
       headers: {
