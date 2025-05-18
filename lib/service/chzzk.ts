@@ -34,7 +34,6 @@ export const getReqWithClient = async <T>({
     const data = await response.json();
     return data as SuccessResType<T>;
   } catch (e) {
-    console.log(e);
     const formattedError: FailedResType = {
       code: 500,
       message: "API 요청 중 오류 발생",
@@ -90,8 +89,6 @@ export const getLive = async (liveCategory: string) => {
             })),
         },
       };
-
-      console.log("response:", response.content.data);
 
       let i = response.content.data.length;
       let reqCount = 0;

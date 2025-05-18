@@ -6,8 +6,9 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const navbarBtns = [
-    { url: "/lol", text: "리그오브레전드" },
-    { url: "/eternal-return", text: "이터널리턴" },
+    { url: "/lol-rank", text: "롤 순위" },
+    { url: "/lol", text: "리그오브레전드 라이브" },
+    { url: "/eternal-return", text: "이터널리턴 라이브" },
   ];
   return (
     <Box bg="#2f3541" px={4} position={"sticky"} top={0} zIndex={1000}>

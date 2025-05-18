@@ -27,13 +27,8 @@ export async function GET(request: NextRequest) {
 
   const accessTokenData = await accessTokenResponse.json();
 
-  console.log("🔹 Access Token API Response:", accessTokenData);
-
   const accessToken = accessTokenData.content?.accessToken;
   const refreshToken = accessTokenData.content?.refreshToken;
-
-  console.log("🔹 Access Token:", accessToken);
-  console.log("🔹 Refresh Token:", refreshToken);
 
   await db.accessToken.upsert({
     where: { id: "unique_token" },
