@@ -1,8 +1,8 @@
+import { getRankWithStreamer } from "./server";
 import MainPage from "./main-page";
-import { getRank } from "./server";
 
 export default async function Rank() {
-  // const data = await getRank();
+  const data = await getRankWithStreamer();
   // console.log(data);
   return <MainPage />;
 }
