@@ -2,7 +2,7 @@
 
 const baseUrl = process.env.BACK_END_URL;
 
-interface GetRankWithStreamer {
+export interface GetRankWithStreamer {
   id: number;
   streamer: string;
   tier: string;
